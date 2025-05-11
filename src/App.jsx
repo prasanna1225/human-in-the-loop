@@ -13,10 +13,7 @@ function App() {
   const [room, setRoom] = useState(null);
 
   useEffect(() => {
-    // Run Firebase knowledge base node creation once
     createKnowledgeBaseNode();
-
-    // Fetch token and connect to LiveKit
     fetch('http://localhost:3001/token?identity=testuser&room=room1')
       .then((response) => response.json())
       .then((data) => {

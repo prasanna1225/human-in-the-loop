@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { ref, push } from 'firebase/database';
-import database from './firebase'; // Import your initialized Firebase database
+import database from './firebase'; 
 
 function HelpRequest() {
   const [question, setQuestion] = useState('');
@@ -16,12 +16,12 @@ function HelpRequest() {
       const helpRequestsRef = ref(database, 'helpRequests');
       await push(helpRequestsRef, {
         question,
-        customerInfo: "Customer details", // You can replace this with dynamic data
+        customerInfo: "Customer details",
         timestamp: Date.now(),
         status: "pending"
       });
       setHelpRequestStatus('✅ Help request sent successfully.');
-      setQuestion(''); // Clear input after sending
+      setQuestion(''); 
     } catch (error) {
       console.error('Error triggering help request:', error);
       setHelpRequestStatus('❌ Failed to send help request.');

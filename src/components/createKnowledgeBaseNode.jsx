@@ -1,4 +1,4 @@
-// createKnowledgeBaseNode.js
+
 import { ref, set } from "firebase/database";
 import database from "./firebase"; 
 
