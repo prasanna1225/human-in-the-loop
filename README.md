@@ -1,12 +1,84 @@
-# React + Vite
+# 🧠 Human-in-the-Loop AI Receptionist System
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A web-based system designed for **Frontdesk.ai** to seamlessly integrate human supervisors into AI receptionist workflows. This system allows escalation of uncertain queries, supervisor responses, and management of learned answers.
 
-Currently, two official plugins are available:
+## 🚀 Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- 🎧 **LiveKit integration** for real-time communication between AI agents and supervisors
+- 👨‍💼 **Supervisor Dashboard** to review, handle, and escalate requests
+- 📚 **Learned Answers** page to manage and update responses to escalated queries
+- ✅ **Human-in-the-loop control** for reliable AI-human handoff
+- ⚡ Built with **React + Vite** for fast development
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 📂 Project Structure
+human-in-loop/
+├── public/
+│ └── vite.svg
+├── src/
+│ ├── components/
+│ │ ├── SupervisorDashboard.jsx
+│ │ ├── LearnedAnswers.jsx
+│ │ ├── HelpRequest.jsx
+│ │ └── AnswerCard.jsx
+│ ├── App.jsx
+│ ├── App.css
+│ └── main.jsx
+├── screenshots/
+│ ├── supervisor-dashboard.png
+│ └── learned-answers.png
+├── index.html
+└── vite.config.js
+
+
+
+## ⚙️ Tech Stack
+
+- **Frontend**: React, Vite, Tailwind CSS
+- **Real-time Comm**: LiveKit
+- **Backend/AI Integration**: Simulated (can be extended to connect to LLMs or backend APIs)
+
+---
+
+## 📦 Installation & Setup
+
+```bash
+# Clone the repository
+git clone https://github.com/your-username/human-in-loop.git
+cd human-in-loop
+
+# Install dependencies
+npm install
+
+# Run the development server
+npm run dev
+
+🧠 How It Works
+AI agents escalate requests they can’t handle to a LiveKit room.
+
+A supervisor joins the room via the dashboard and assists.
+
+Supervisor marks whether it’s a known query or a new one.
+
+New answers get stored on the Learned Answers page for future use.
+
+✅ Future Improvements
+Integrate real LLM-based receptionists
+
+Add authentication for supervisors
+
+Webhook support for saving learned answers to a database
+
+Real-time notification for escalated requests
+
+🙌 Acknowledgments
+Built as part of the Frontdesk.ai Engineering Test
+Thanks to LiveKit for the WebRTC infrastructure
+
+📧 Contact
+Developed by Prasanna
+GitHub: @prasanna1225
+Email: prasannadonga1357@gmail.com
+
+
